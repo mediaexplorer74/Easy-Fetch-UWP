@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\Admin\Desktop\RE\XAML.UI\Microsoft.UI.Xaml.winmd-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C4C7ADD2-1737-4B07-B2C3-C5EC74099799}</ProjectGuid>
+    <OutputType>WinMD</OutputType>
+    <AssemblyName>Microsoft.UI.Xaml</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>255.255.255.255</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Microsoft.UI.Xaml</RootNamespace>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.ObjectModel" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Runtime.InteropServices.WindowsRuntime" />
+    <Reference Include="System.Runtime.WindowsRuntime" />
+    <Reference Include="System.Runtime.WindowsRuntime.UI.Xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\ColorSpectrumShape.cs" />
+    <Compile Include="Controls\ColorSpectrumComponents.cs" />
+    <Compile Include="Controls\ColorPickerHsvChannel.cs" />
+    <Compile Include="Controls\IColorChangedEventArgs.cs" />
+    <Compile Include="Controls\ColorChangedEventArgs.cs" />
+    <Compile Include="Controls\IColorPicker.cs" />
+    <Compile Include="Controls\ColorPicker.cs" />
+    <Compile Include="Controls\IColorPickerStatics.cs" />
+    <Compile Include="Controls\IColorPickerFactory.cs" />
+    <Compile Include="Controls\IIconSource.cs" />
+    <Compile Include="Controls\IIconSourceFactory.cs" />
+    <Compile Include="Controls\IIconSourceStatics.cs" />
+    <Compile Include="Controls\IconSource.cs" />
+    <Compile Include="Controls\ISymbolIconSource.cs" />
+    <Compile Include="Controls\ISymbolIconSourceFactory.cs" />
+    <Compile Include="Controls\SymbolIconSource.cs" />
+    <Compile Include="Controls\ISymbolIconSourceStatics.cs" />
+    <Compile Include="Controls\IFontIconSource.cs" />
+    <Compile Include="Controls\IFontIconSourceFactory.cs" />
+    <Compile Include="Controls\FontIconSource.cs" />
+    <Compile Include="Controls\IFontIconSourceStatics.cs" />
+    <Compile Include="Controls\IBitmapIconSource.cs" />
+    <Compile Include="Controls\IBitmapIconSourceFactory.cs" />
+    <Compile Include="Controls\BitmapIconSource.cs" />
+    <Compile Include="Controls\IBitmapIconSourceStatics.cs" />
+    <Compile Include="Controls\IPathIconSource.cs" />
+    <Compile Include="Controls\IPathIconSourceFactory.cs" />
+    <Compile Include="Controls\PathIconSource.cs" />
+    <Compile Include="Controls\IPathIconSourceStatics.cs" />
+    <Compile Include="Controls\IRevealListViewItemPresenterFactory.cs" />
+    <Compile Include="Controls\IRevealListViewItemPresenter.cs" />
+    <Compile Include="Controls\RevealListViewItemPresenter.cs" />
+    <Compile Include="Controls\NavigationViewDisplayMode.cs" />
+    <Compile Include="Controls\INavigationViewDisplayModeChangedEventArgs.cs" />
+    <Compile Include="Controls\NavigationViewDisplayModeChangedEventArgs.cs" />
+    <Compile Include="Controls\INavigationViewSelectionChangedEventArgs.cs" />
+    <Compile Include="Controls\NavigationViewSelectionChangedEventArgs.cs" />
+    <Compile Include="Controls\INavigationViewItemInvokedEventArgs.cs" />
+    <Compile Include="Controls\NavigationViewItemInvokedEventArgs.cs" />
+    <Compile Include="Controls\INavigationView.cs" />
+    <Compile Include="Controls\NavigationView.cs" />
+    <Compile Include="Controls\INavigationViewFactory.cs" />
+    <Compile Include="Controls\INavigationViewStatics.cs" />
+    <Compile Include="Controls\INavigationViewList.cs" />
+    <Compile Include="Controls\INavigationViewListFactory.cs" />
+    <Compile Include="Controls\NavigationViewList.cs" />
+    <Compile Include="Controls\INavigationViewItemBase.cs" />
+    <Compile Include="Controls\INavigationViewItemBaseFactory.cs" />
+    <Compile Include="Controls\NavigationViewItemBase.cs" />
+    <Compile Include="Controls\INavigationViewItem.cs" />
+    <Compile Include="Controls\INavigationViewItemFactory.cs" />
+    <Compile Include="Controls\NavigationViewItem.cs" />
+    <Compile Include="Controls\INavigationViewItemStatics.cs" />
+    <Compile Include="Controls\INavigationViewItemSeparator.cs" />
+    <Compile Include="Controls\INavigationViewItemSeparatorFactory.cs" />
+    <Compile Include="Controls\NavigationViewItemSeparator.cs" />
+    <Compile Include="Controls\INavigationViewItemHeader.cs" />
+    <Compile Include="Controls\INavigationViewItemHeaderFactory.cs" />
+    <Compile Include="Controls\NavigationViewItemHeader.cs" />
+    <Compile Include="Controls\ParallaxSourceOffsetKind.cs" />
+    <Compile Include="Controls\IParallaxView.cs" />
+    <Compile Include="Controls\IParallaxViewStatics.cs" />
+    <Compile Include="Controls\IParallaxViewFactory.cs" />
+    <Compile Include="Controls\ParallaxView.cs" />
+    <Compile Include="Controls\IPersonPicture.cs" />
+    <Compile Include="Controls\IPersonPictureFactory.cs" />
+    <Compile Include="Controls\PersonPicture.cs" />
+    <Compile Include="Controls\IPersonPictureStatics.cs" />
+    <Compile Include="Controls\IRatingItemInfo.cs" />
+    <Compile Include="Controls\IRatingItemInfoFactory.cs" />
+    <Compile Include="Controls\RatingItemInfo.cs" />
+    <Compile Include="Controls\IRatingItemFontInfo.cs" />
+    <Compile Include="Controls\IRatingItemFontInfoFactory.cs" />
+    <Compile Include="Controls\RatingItemFontInfo.cs" />
+    <Compile Include="Controls\IRatingItemFontInfoStatics.cs" />
+    <Compile Include="Controls\IRatingItemImageInfo.cs" />
+    <Compile Include="Controls\IRatingItemImageInfoFactory.cs" />
+    <Compile Include="Controls\RatingItemImageInfo.cs" />
+    <Compile Include="Controls\IRatingItemImageInfoStatics.cs" />
+    <Compile Include="Controls\IRatingControl.cs" />
+    <Compile Include="Controls\RatingControl.cs" />
+    <Compile Include="Controls\IRatingControlFactory.cs" />
+    <Compile Include="Controls\IRatingControlStatics.cs" />
+    <Compile Include="Controls\SwipeBehaviorOnInvoked.cs" />
+    <Compile Include="Controls\ISwipeItem.cs" />
+    <Compile Include="Controls\SwipeItem.cs" />
+    <Compile Include="Controls\SwipeItemInvokedEventArgs.cs" />
+    <Compile Include="Controls\ISwipeItemStatics.cs" />
+    <Compile Include="Controls\ISwipeItemFactory.cs" />
+    <Compile Include="Controls\SwipeMode.cs" />
+    <Compile Include="Controls\ISwipeItemInvokedEventArgs.cs" />
+    <Compile Include="Controls\ISwipeItems.cs" />
+    <Compile Include="Controls\ISwipeItemsFactory.cs" />
+    <Compile Include="Controls\SwipeItems.cs" />
+    <Compile Include="Controls\ISwipeItemsStatics.cs" />
+    <Compile Include="Controls\ISwipeControl.cs" />
+    <Compile Include="Controls\SwipeControl.cs" />
+    <Compile Include="Controls\ISwipeControlFactory.cs" />
+    <Compile Include="Controls\ISwipeControlStatics.cs" />
+    <Compile Include="Controls\TreeViewSelectionMode.cs" />
+    <Compile Include="Controls\ITreeViewItemClickEventArgs.cs" />
+    <Compile Include="Controls\TreeViewItemClickEventArgs.cs" />
+    <Compile Include="Controls\XamlIntegerToIndentationConverter.cs" />
+    <Compile Include="Controls\XamlBooleanToVisibilityConverter.cs" />
+    <Compile Include="Controls\ITreeViewNode.cs" />
+    <Compile Include="Controls\TreeViewNode.cs" />
+    <Compile Include="Controls\ITreeViewNodeStatics.cs" />
+    <Compile Include="Controls\ITreeViewNodeFactory.cs" />
+    <Compile Include="Controls\ITreeViewExpandingEventArgs.cs" />
+    <Compile Include="Controls\TreeViewExpandingEventArgs.cs" />
+    <Compile Include="Controls\ITreeViewList.cs" />
+    <Compile Include="Controls\ITreeViewListFactory.cs" />
+    <Compile Include="Controls\TreeViewList.cs" />
+    <Compile Include="Controls\ITreeView.cs" />
+    <Compile Include="Controls\TreeView.cs" />
+    <Compile Include="Controls\ITreeViewStatics.cs" />
+    <Compile Include="Controls\ITreeViewFactory.cs" />
+    <Compile Include="Controls\ITreeViewItem.cs" />
+    <Compile Include="Controls\ITreeViewItemFactory.cs" />
+    <Compile Include="Controls\TreeViewItem.cs" />
+    <Compile Include="Controls\IDEPControlsClassStatics.cs" />
+    <Compile Include="Controls\DEPControlsClass.cs" />
+    <Compile Include="Controls\IDEPControlsThemeResourcesStatics.cs" />
+    <Compile Include="Controls\IDEPControlsThemeResources.cs" />
+    <Compile Include="Controls\DEPControlsThemeResources.cs" />
+    <Compile Include="Controls\Primitives\IColorSpectrum.cs" />
+    <Compile Include="Controls\Primitives\ColorSpectrum.cs" />
+    <Compile Include="Controls\Primitives\IColorSpectrumStatics.cs" />
+    <Compile Include="Controls\Primitives\IColorSpectrumFactory.cs" />
+    <Compile Include="Controls\Primitives\IColorPickerSlider.cs" />
+    <Compile Include="Controls\Primitives\IColorPickerSliderStatics.cs" />
+    <Compile Include="Controls\Primitives\IColorPickerSliderFactory.cs" />
+    <Compile Include="Controls\Primitives\ColorPickerSlider.cs" />
+    <Compile Include="Media\AcrylicBackgroundSource.cs" />
+    <Compile Include="Media\IAcrylicBrush.cs" />
+    <Compile Include="Media\IAcrylicBrushStatics.cs" />
+    <Compile Include="Media\IAcrylicBrushFactory.cs" />
+    <Compile Include="Media\AcrylicBrush.cs" />
+    <Compile Include="Media\RevealBrushState.cs" />
+    <Compile Include="Media\IRevealBrush.cs" />
+    <Compile Include="Media\IRevealBrushFactory.cs" />
+    <Compile Include="Media\RevealBrush.cs" />
+    <Compile Include="Media\IRevealBrushStatics.cs" />
+    <Compile Include="Media\IRevealBorderBrushFactory.cs" />
+    <Compile Include="Media\IRevealBorderBrush.cs" />
+    <Compile Include="Media\RevealBorderBrush.cs" />
+    <Compile Include="Media\IRevealBackgroundBrushFactory.cs" />
+    <Compile Include="Media\IRevealBackgroundBrush.cs" />
+    <Compile Include="Media\RevealBackgroundBrush.cs" />
+    <Compile Include="Automation\Peers\IColorSpectrumAutomationPeer.cs" />
+    <Compile Include="Automation\Peers\IColorSpectrumAutomationPeerFactory.cs" />
+    <Compile Include="Automation\Peers\ColorSpectrumAutomationPeer.cs" />
+    <Compile Include="Automation\Peers\IColorPickerSliderAutomationPeer.cs" />
+    <Compile Include="Automation\Peers\IColorPickerSliderAutomationPeerFactory.cs" />
+    <Compile Include="Automation\Peers\ColorPickerSliderAutomationPeer.cs" />
+    <Compile Include="Automation\Peers\INavigationViewItemAutomationPeer.cs" />
+    <Compile Include="Automation\Peers\INavigationViewItemAutomationPeerFactory.cs" />
+    <Compile Include="Automation\Peers\NavigationViewItemAutomationPeer.cs" />
+    <Compile Include="Automation\Peers\IPersonPictureAutomationPeer.cs" />
+    <Compile Include="Automation\Peers\IPersonPictureAutomationPeerFactory.cs" />
+    <Compile Include="Automation\Peers\PersonPictureAutomationPeer.cs" />
+    <Compile Include="Automation\Peers\IRatingControlAutomationPeer.cs" />
+    <Compile Include="Automation\Peers\IRatingControlAutomationPeerFactory.cs" />
+    <Compile Include="Automation\Peers\RatingControlAutomationPeer.cs" />
+    <Compile Include="Automation\Peers\ITreeViewListAutomationPeer.cs" />
+    <Compile Include="Automation\Peers\ITreeViewListAutomationPeerFactory.cs" />
+    <Compile Include="Automation\Peers\TreeViewListAutomationPeer.cs" />
+    <Compile Include="Automation\Peers\ITreeViewItemAutomationPeer.cs" />
+    <Compile Include="Automation\Peers\ITreeViewItemAutomationPeerFactory.cs" />
+    <Compile Include="Automation\Peers\TreeViewItemAutomationPeer.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,8 +1,20 @@
-
 # Easy-Fetch for Windows 10 (Mobile)
-A Simple utility to help users Manage their device with Device Portal, Download Flash Files, Update Cabs, Store Apps and more!
 
+## About / Abstract
+A Simple utility to help users Manage their device with Device Portal, Download Flash Files, Update Cabs, Store Apps...
 
+## Screenshot
+![](Images/Easy01.png)
+
+## Showcase (Video)
+
+https://www.youtube.com/watch?v=9anjl0o9qfU
+
+Easy-Fetch Features by W10MGroup Youtube channel
+
+## My 2 cents
+- Research NiL.JS used in/at main Easy-Fetch "module"
+- My (failed) attempt to add Astoria compatibility...
 
 ### What's new in v1.13.20
 
@@ -27,21 +39,13 @@ A Simple utility to help users Manage their device with Device Portal, Download 
 *For Cab Lists go [here](https://github.com/empyreal96/WPCabLinks.db)* 
 
 
-
-![](/screens.jpg)
-
-
-
 ## Requirements
 
--  Windows 10 Mobile Build 14393+
+-  Windows 10 (Mobile) Build 10240+
 
-- Windows 10 Desktop Build 14393+
+## Referecnes / Credits / Open Source Used
 
-
-
-## Credits and Open Source Used
-
+- [Easy-Fetch-UWP](https://github.com/Empyreal96/Easy-Fetch-UWP), a simple tool to help WP users in downloading various things, by [Empyreal96](https://github.com/Empyreal96)
 - Thanks to [@BAstifan](https://github.com/basharast) for help with getting the Device Portal Wrapper, FFU Downloader and StoreLib working and providing some of the info classes used.
 - [WindowsDevicePortalWrapper](https://github.com/Microsoft/WindowsDevicePortalWrapper) sample from Microsoft to connect to Device Portal securely.
 - Device Path info is using parts of [UWP-SystemInfoCollector](https://github.com/validvoid/UWP-SystemInfoCollector)
@@ -50,4 +54,13 @@ A Simple utility to help users Manage their device with Device Portal, Download 
 - [StoreLib](https://github.com/StoreDev/StoreLib) for the original lib to connect to MS Servers
 - [libvideo](https://github.com/omansak/libvideo) for the basic YT download functionallity
 - [SharpCompressUWP](https://github.com/basharast/SharpCompressUWP) an excellent fork by @basharast to help extract and compress archives
+
+
+## ..
+As is. No support. RnD only. DIY. 
+
+## .
+[m][e] 2023
+
+
   
