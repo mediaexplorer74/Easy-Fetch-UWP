@@ -37,12 +37,12 @@ A Simple utility to help users Manage their device with Device Portal, Download 
 
 ## Screens
 
-![screens](screens/img01.jpg)
-![screens](screens/img02.jpg)
-![screens](screens/img03.jpg)
-![screens](screens/img04.jpg)
-![screens](screens/img05.jpg)
-![screens](screens/img06.jpg)
+![](images/img01.jpg)
+![](images/img02.jpg)
+![](images/img03.jpg)
+![](images/img04.jpg)
+![](images/img05.jpg)
+![](images/img06.jpg)
 
 
 ## Requirements
