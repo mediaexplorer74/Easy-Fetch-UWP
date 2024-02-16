@@ -1,27 +1,23 @@
-# Easy-Fetch for Windows 10 (Mobile)
+# Easy-Fetch for Windows 10 (Mobile) v1.13.20
 
-## About / Abstract
-A Simple utility to help users Manage their device with Device Portal, Download Flash Files, Update Cabs, Store Apps...
+This great project forked (by me) from https://github.com/Empyreal96/Easy-Fetch-UWP. 
 
-## Screenshot
-![](Images/Easy01.png)
+Reason: my own edicational purposes (some cool js "injection" mechanics, etc.).
 
-## Showcase (Video)
 
-https://www.youtube.com/watch?v=9anjl0o9qfU
+## About
 
-Easy-Fetch Features by W10MGroup Youtube channel
+A Simple utility to help users Manage their device with Device Portal, Download Flash Files, Update Cabs, Store Apps and more!
 
-## My 2 cents
-- Research NiL.JS used in/at main Easy-Fetch "module"
-- My (failed) attempt to add Astoria compatibility...
 
-### What's new in v1.13.20
+### What's new in v1.13.21
 
-- Only change for now is updated certificate for PC Installs
+- Minimal code refactor.
+- Minimal change for now is updated certificate for PC Installs
 
 
   **[Find the latest release here](https://github.com/Empyreal96/Easy-Fetch-UWP/releases/tag/1.13.16-prerelease)**
+
 
 ## What can it do?
 
@@ -39,13 +35,27 @@ Easy-Fetch Features by W10MGroup Youtube channel
 *For Cab Lists go [here](https://github.com/empyreal96/WPCabLinks.db)* 
 
 
+## Screens
+
+![screens](screens/img01.jpg)
+![screens](screens/img02.jpg)
+![screens](screens/img03.jpg)
+![screens](screens/img04.jpg)
+![screens](screens/img05.jpg)
+![screens](screens/img06.jpg)
+
+
 ## Requirements
 
--  Windows 10 (Mobile) Build 10240+
+-  Windows 10 Mobile Build 14393+
 
-## Referecnes / Credits / Open Source Used
+- Windows 10 Desktop Build 14393+
 
-- [Easy-Fetch-UWP](https://github.com/Empyreal96/Easy-Fetch-UWP), a simple tool to help WP users in downloading various things, by [Empyreal96](https://github.com/Empyreal96)
+
+
+## Credits and Open Source Used
+
+- https://github.com/Empyreal96/Easy-Fetch-UWP Empyreal96's Easy-Fetch-UWP (Original project)
 - Thanks to [@BAstifan](https://github.com/basharast) for help with getting the Device Portal Wrapper, FFU Downloader and StoreLib working and providing some of the info classes used.
 - [WindowsDevicePortalWrapper](https://github.com/Microsoft/WindowsDevicePortalWrapper) sample from Microsoft to connect to Device Portal securely.
 - Device Path info is using parts of [UWP-SystemInfoCollector](https://github.com/validvoid/UWP-SystemInfoCollector)
@@ -54,13 +64,10 @@ Easy-Fetch Features by W10MGroup Youtube channel
 - [StoreLib](https://github.com/StoreDev/StoreLib) for the original lib to connect to MS Servers
 - [libvideo](https://github.com/omansak/libvideo) for the basic YT download functionallity
 - [SharpCompressUWP](https://github.com/basharast/SharpCompressUWP) an excellent fork by @basharast to help extract and compress archives
-
+ 
 
 ## ..
 As is. No support. RnD only. DIY. 
 
 ## .
-[m][e] 2023
-
-
-  
+[m][e] 2024

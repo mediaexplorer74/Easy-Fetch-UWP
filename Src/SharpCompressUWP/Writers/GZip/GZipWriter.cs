@@ -19,8 +19,8 @@ namespace SharpCompress.Writers.GZip
                 destination = new NonDisposingStream(destination);
             }
             InitalizeStream(new GZipStream(destination, CompressionMode.Compress,
-                options.CompressionLevel == null ? CompressionLevel.Default : options.CompressionLevel,
-                WriterOptions.ArchiveEncoding.GetEncoding()));
+                                           options.CompressionLevel == null ? CompressionLevel.Default : options.CompressionLevel,
+                                           WriterOptions.ArchiveEncoding.GetEncoding()));
         }
 
         protected override void Dispose(bool isDisposing)

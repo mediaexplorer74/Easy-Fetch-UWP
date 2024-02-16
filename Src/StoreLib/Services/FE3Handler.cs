@@ -119,15 +119,16 @@ namespace StoreLib.Services
                 {
                     packageName = node.ParentNode.ParentNode.ChildNodes[3].ChildNodes[2].FirstChild.FirstChild.Attributes[2].Value;
                 }
-                catch(Exception ex)
+                catch//(Exception ex)
                 {
 
                 } 
+
                 try
                 {
                     isAppxFramework = node.ParentNode.ParentNode.ChildNodes[1].Attributes[2].Value.Equals("true");
                 }
-                catch(Exception ex)
+                catch//(Exception ex)
                 {
 
                 }
@@ -136,10 +137,11 @@ namespace StoreLib.Services
                     isAppxBundle = node.ParentNode.ParentNode.ChildNodes[3].ChildNodes[2].FirstChild.FirstChild.Attributes[1].Value.Equals("true");
                     packageType = node.ParentNode.ParentNode.ChildNodes[3].ChildNodes[2].FirstChild.FirstChild.Attributes[0].Value;
                 }
-                catch (Exception ex)
+                catch// (Exception ex)
                 {
 
                 }
+
                 var packageItem = new PackageItem();
                 packageItem.RevisionNumber = RevisionID;
                 packageItem.UpdateID = UpdateID;

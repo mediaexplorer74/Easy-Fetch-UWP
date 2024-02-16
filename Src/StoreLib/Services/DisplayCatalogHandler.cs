@@ -200,12 +200,13 @@ namespace StoreLib.Services
             }
             List<Addon> ProductAddons = new List<Addon>();
             List<string> ProductIDs = new List<string>();
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+
             foreach(dynamic AddonData in this.ProductListing.Product.MarketProperties[0].RelatedProducts)
             {
-                
+                //
             }
-
+            return default;
         }
         
         /// <summary>

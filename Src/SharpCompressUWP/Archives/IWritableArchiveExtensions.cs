@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -81,10 +80,11 @@ namespace SharpCompress.Archives
                             }
                         }
                     }
-                    catch (Exception ex)
+                    catch //(Exception ex)
                     {
-                        Debug.WriteLine("[ex] " + ex.Message);
+                        //
                     }
+
                     var path = targetFolder.Path;
                     var filePath = file.Path;
                     var basicProperties = await file.GetBasicPropertiesAsync();

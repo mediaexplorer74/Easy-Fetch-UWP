@@ -1,6 +1,5 @@
 ﻿using SharpCompress.Readers;
 using System;
-using System.Diagnostics;
 using System.IO;
 using System.Threading.Tasks;
 using Windows.Storage;
@@ -171,9 +170,8 @@ namespace SharpCompress.Common
                 var testFolder = (StorageFolder)await storageFolder.TryGetItemAsync(subFolderName);
                 return testFolder != null;
             }
-            catch (Exception ex)
+            catch //(Exception e)
             {
-                Debug.WriteLine("[ex] " + ex.Message);
                 return false;
             }
         }
