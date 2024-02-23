@@ -43,9 +43,9 @@ Draft / Not for production.
 ![Desktop](Images/shot03.png)
 ![Desktop](Images/shot04.png)
 ![Mobile](Images/shot05.png)
-![[Mobile](Images/shot06.png)
-![[Mobile](Images/shot07.png)
-![[Mobile](Images/shot08.png)
+![Mobile](Images/shot06.png)
+![Mobile](Images/shot07.png)
+![Mobile](Images/shot08.png)
 
 ## Requirements
 
