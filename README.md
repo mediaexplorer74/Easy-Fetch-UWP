@@ -1,20 +1,20 @@
-# Easy-Fetch for Windows 10 (Mobile) v1.13.20
+# EasyFetch for Windows 10 (Mobile) v1.2-alpha
 
-This great project forked (by me) from https://github.com/Empyreal96/Easy-Fetch-UWP. 
+This great project forked from https://github.com/Empyreal96/Easy-Fetch-UWP. 
 
-Reason: my own edicational purposes (some cool js "injection" mechanics, etc.).
-
+Reason: my own edicational purposes (some cool js "injection" mechanics, YT donloader, etc.).
+Draft / Not for production.
 
 ## About
 
 A Simple utility to help users Manage their device with Device Portal, Download Flash Files, Update Cabs, Store Apps and more!
 
 
-### What's new in v1.13.21
+### What's new in v1.2-alpha
 
-- Minimal code refactor.
-- Minimal change for now is updated certificate for PC Installs
-
+- Minimal code refactoring.
+- Minimal app logics change (libvideo updated; nils.js & ffmpeg... removed) 
+- App certificate prolongated till feb, 25 2025 
 
   **[Find the latest release here](https://github.com/Empyreal96/Easy-Fetch-UWP/releases/tag/1.13.16-prerelease)**
 
@@ -37,10 +37,10 @@ A Simple utility to help users Manage their device with Device Portal, Download 
 
 ## Screens
 
-![](images/img01.png)
-![](images/img02.png)
-![](images/img03.png)
-![](images/img04.png)
+![](images/shot01.png)
+![](images/shot02.png)
+![](images/shot03.png)
+![](images/shot04.png)
 ![](images/img05.png)
 ![](images/img06.png)
 

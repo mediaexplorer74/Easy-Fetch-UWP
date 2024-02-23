@@ -1,4 +1,6 @@
-﻿using System;
+﻿// HomePage
+
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -35,14 +37,13 @@ using SharpCompress.Common;
 using SharpCompress.Readers;
 
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
-
+// Phone_Helper namespace
 namespace Phone_Helper
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Home : Windows.UI.Xaml.Controls.Page
+    public sealed partial class HomePage : Windows.UI.Xaml.Controls.Page
     {
         /// <summary>
         /// MUST CHANGE THESE BEFORE EACH PUBLIC GITHUB RELEASE
@@ -51,7 +52,7 @@ namespace Phone_Helper
         /// 
         /// MUST CHANGE THESE BEFORE EACH PUBLIC GITHUB RELEASE
         /// </summary>
-        public static string CurrentBuildVersion = "1.13.20-prerelease";
+        public static string CurrentBuildVersion = "1.2-alpha";//"1.13.20-prerelease";
         public static string PreviousBuildVersion = "1.13.19-prerelease";
         public static string NextBuildVersion = "1.13.21-prerelease";
         public static string UploadedFileName = "Easy-Fetch_1.13.21.0_Debug_Test.zip";
@@ -68,7 +69,7 @@ namespace Phone_Helper
         CancellationTokenSource cancellationToken;
 
         BackgroundDownloader backgroundDownloader = new BackgroundDownloader();
-        public Home()
+        public HomePage()
         {
             this.InitializeComponent();
             DLUpdate.IsEnabled = true;
@@ -77,28 +78,26 @@ namespace Phone_Helper
 
             ProgressBarDownload.Visibility = Visibility.Collapsed;
             DLUpdate.Visibility = Visibility.Collapsed;
-            HomePage.Text = $"[Version: {CurrentBuildVersion}]\n"; 
-            HomePage.Text += "This is in ongoing development, suggestions and feedback are welcome. Features and UI not final" + "\n\n";
-            HomePage.Text += "A simple tool to help users:" + "\n" +
+            HomePageTxt.Text = $"[Version: {CurrentBuildVersion}]\n"; 
+            HomePageTxt.Text += "This is in ongoing development, suggestions and feedback are welcome. Features and UI not final" + "\n\n";
+            HomePageTxt.Text += "A simple tool to help users:" + "\n" +
                              "• Search for FFU Files and Download" + "\n"
                            + "• Download Update Cabs for W10M" + "\n"
                            + "• Search and Download Appx files from MS Store" + "\n"
                            + "• Download Files and Youtube Videos" + "\n"
                            + "• Extract Archives easily";
 
-            UpdateOut.Text += $"Whats New in .20?\n" +
-                       $"- No changes, just renewing certificate for PC installs";
+            UpdateOut.Text += $"Whats New in 1.2-alpha?\n" +
+                       $"- No principial changes yet (just minimal code refactoring + renewing certificate)";
             ///
             /// Network Check and Check for Updates
             bool isNetworkConnected = NetworkInterface.GetIsNetworkAvailable();
             if (isNetworkConnected == true)
             {
-                CheckForUpdate();
-                
+                CheckForUpdate();                
             }
             else
-            {
-                
+            {                
                 ProgressBarDownload.Visibility = Visibility.Collapsed;
                 DLUpdate.Visibility = Visibility.Collapsed;
             }

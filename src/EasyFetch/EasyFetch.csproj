@@ -8,7 +8,7 @@
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Phone_Helper</RootNamespace>
-    <AssemblyName>Easy-Fetch</AssemblyName>
+    <AssemblyName>EasyFetch</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.18362.0</TargetPlatformVersion>
@@ -17,9 +17,8 @@
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
-    <PackageCertificateKeyFile>Easy-Fetch_TemporaryKey.pfx</PackageCertificateKeyFile>
-    <PackageCertificateThumbprint>
-    </PackageCertificateThumbprint>
+    <PackageCertificateKeyFile>EasyFetch_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateThumbprint>0ADE5B08A4308C43436645B9B401322253BB66E1</PackageCertificateThumbprint>
     <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
     <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
     <AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
@@ -105,39 +104,39 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Acknowledgements.xaml.cs">
+    <Compile Include="Pages\Acknowledgements.xaml.cs">
       <DependentUpon>Acknowledgements.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Archiver.xaml.cs">
+    <Compile Include="Pages\Archiver.xaml.cs">
       <DependentUpon>Archiver.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ArchiverPlus.cs" />
-    <Compile Include="CabFetch.xaml.cs">
+    <Compile Include="Helpers\ArchiverPlus.cs" />
+    <Compile Include="Pages\CabFetch.xaml.cs">
       <DependentUpon>CabFetch.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Exception.cs" />
+    <Compile Include="Helpers\Exception.cs" />
     <Compile Include="GlobalStrings.cs" />
-    <Compile Include="Home.xaml.cs">
-      <DependentUpon>Home.xaml</DependentUpon>
+    <Compile Include="Pages\HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FFUSearch.xaml.cs">
+    <Compile Include="Pages\FFUSearch.xaml.cs">
       <DependentUpon>FFUSearch.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Downloaders.xaml.cs">
+    <Compile Include="Pages\Downloaders.xaml.cs">
       <DependentUpon>Downloaders.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FFUClient.cs" />
-    <Compile Include="FileSize.cs" />
-    <Compile Include="MainPage.xaml.cs">
+    <Compile Include="Helpers\FFUClient.cs" />
+    <Compile Include="Helpers\FileSize.cs" />
+    <Compile Include="Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="NativeMethods.cs" />
+    <Compile Include="Helpers\NativeMethods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StoreHelper.cs" />
-    <Compile Include="StoreFetch.xaml.cs">
+    <Compile Include="Helpers\StoreHelper.cs" />
+    <Compile Include="Pages\StoreFetch.xaml.cs">
       <DependentUpon>StoreFetch.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\FileNamePopup.xaml.cs">
@@ -150,9 +149,6 @@
     </AppxManifest>
     <Content Include="Assets\appx.png" />
     <Content Include="Assets\backdrop.jpg" />
-    <Content Include="libvideo.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\LargeTile.scale-100.png" />
@@ -215,35 +211,35 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Acknowledgements.xaml">
+    <Page Include="Pages\Acknowledgements.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Archiver.xaml">
+    <Page Include="Pages\Archiver.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CabFetch.xaml">
+    <Page Include="Pages\CabFetch.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Home.xaml">
+    <Page Include="Pages\HomePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="FFUSearch.xaml">
+    <Page Include="Pages\FFUSearch.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Downloaders.xaml">
+    <Page Include="Pages\Downloaders.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainPage.xaml">
+    <Page Include="Pages\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="StoreFetch.xaml">
+    <Page Include="Pages\StoreFetch.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -253,12 +249,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="FFmpeg.UWP">
-      <Version>4.1.3</Version>
-    </PackageReference>
-    <PackageReference Include="FFmpegInterop.Universal">
-      <Version>1.1.12</Version>
-    </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.12</Version>
     </PackageReference>
@@ -267,9 +257,6 @@
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>13.0.3</Version>
-    </PackageReference>
-    <PackageReference Include="NiL.JS">
-      <Version>2.5.1514</Version>
     </PackageReference>
     <PackageReference Include="Octokit">
       <Version>0.40.0</Version>
@@ -291,13 +278,11 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="libvideo, Version=3.1.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>.\libvideo.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SharpCompressUWP\SharpCompress.csproj">
+    <ProjectReference Include="..\libvideo\libvideo.csproj">
+      <Project>{65c6f78c-c5d7-4321-9aae-d1d3f7aaf3cb}</Project>
+      <Name>libvideo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SharpCompress\SharpCompress.csproj">
       <Project>{8f9bb3ee-e365-4fe0-b5ee-fb45d7e7fe41}</Project>
       <Name>SharpCompress</Name>
     </ProjectReference>
@@ -307,7 +292,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Easy-Fetch_TemporaryKey.pfx" />
+    <None Include="EasyFetch_TemporaryKey.pfx" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

@@ -38,7 +38,7 @@ namespace Phone_Helper
 
             
             
-            var HomePage = $"Phone_Helper.Home";
+            var HomePage = $"Phone_Helper.HomePage";
             var HomePageType = Type.GetType(HomePage);
             ContentFrame.Navigate(HomePageType);
         

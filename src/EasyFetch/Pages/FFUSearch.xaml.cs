@@ -47,7 +47,7 @@ namespace Phone_Helper
             ApplicationDataContainer localSettings = ApplicationData.Current.LocalSettings;
 
 
-            //SoReFetch Home
+            //SoReFetch HomePage
             SoReIntro.Text += "FFU Download Tool" + "\n" + "\n";
             SoReIntro.Text += "Search for FFUs for your Windows Phone!" + "\n";
             SoReIntro.Text += "\n\n" + "• Product Type is REQUIRED"

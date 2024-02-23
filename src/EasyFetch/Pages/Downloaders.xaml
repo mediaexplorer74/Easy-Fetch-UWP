@@ -106,7 +106,6 @@
                         />
                     
                   
-
                     <Border 
                         x:Name="YTThumbnailBorder" 
                         RelativePanel.Below="ProgressText"
