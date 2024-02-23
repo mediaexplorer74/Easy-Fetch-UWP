@@ -1,14 +1,15 @@
-# EasyFetch for Windows 10 (Mobile) v1.2-alpha
+# EasyFetch 
 
-This great project forked from https://github.com/Empyreal96/Easy-Fetch-UWP. 
-
-Reason: my own edicational purposes (some cool js "injection" mechanics, YT donloader, etc.).
-Draft / Not for production.
+Easy-Fetch for Windows 10 (Mobile) v1.2-alpha
 
 ## About
 
 A Simple utility to help users Manage their device with Device Portal, Download Flash Files, Update Cabs, Store Apps and more!
 
+This great project forked from https://github.com/Empyreal96/Easy-Fetch-UWP. 
+
+Reason: my own edicational purposes (some cool js "injection" mechanics, YT donloader, etc.).
+Draft / Not for production.
 
 ### What's new in v1.2-alpha
 
