@@ -4,12 +4,12 @@ using System.Runtime.CompilerServices;
 /*
 [assembly: AssemblyCompany("Bar Arnon,OMANSAK")]
 [assembly: AssemblyConfiguration("Debug")]
-[assembly: AssemblyCopyright("Copyright 2018 Bar Arnon | 2022 OMANSAK")]
-[assembly: AssemblyDescription("libvideo (aka VideoLibrary) is a modern .NET library for downloading YouTube videos. It is very lightweight. GitHub - https://github.com/omansak/libvideo")]
-[assembly: AssemblyFileVersion("3.2.3.0")]
-[assembly: AssemblyInformationalVersion("3.2.3")]
+[assembly: AssemblyCopyright("Copyright 2018 Bar Arnon | 2021 OMANSAK")]
+[assembly: AssemblyDescription("libvideo is a fast, clean way to download YouTube videos. It is fully portable and has no dependencies.\n\n    Find us on GitHub at https://github.com/omansak/libvideo")]
+[assembly: AssemblyFileVersion("3.1.4.0")]
+[assembly: AssemblyInformationalVersion("3.1.4")]
 [assembly: AssemblyProduct("libvideo")]
 [assembly: AssemblyTitle("libvideo")]
 [assembly: AssemblyMetadata("RepositoryUrl", "https://github.com/omansak/libvideo")]
-[assembly: AssemblyVersion("3.2.3.0")]
+[assembly: AssemblyVersion("3.1.4.0")]
 */

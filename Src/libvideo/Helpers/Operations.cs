@@ -1,23 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// Decompiled with JetBrains decompiler
+// Type: VideoLibrary.Helpers.Operations
+// Assembly: libvideo, Version=3.1.4.0, Culture=neutral, PublicKeyToken=null
+// MVID: 17817EC5-58AD-49FB-80DB-1FFC57084213
+// Assembly location: C:\Users\Admin\Desktop\RE\EasyFetch\libvideo.dll
 
+#nullable disable
 namespace VideoLibrary.Helpers
 {
-    internal struct Operations
+  internal struct Operations
+  {
+    public Operations(string reverse, string swap, string splice)
     {
-        public Operations(string reverse, 
-            string swap, string splice)
-        {
-            this.Reverse = reverse;
-            this.Swap = swap;
-            this.Splice = splice;
-        }
-
-        public string Reverse { get; }
-        public string Swap { get; }
-        public string Splice { get; }
+      this.Reverse = reverse;
+      this.Swap = swap;
+      this.Splice = splice;
     }
+
+    public string Reverse { get; }
+
+    public string Swap { get; }
+
+    public string Splice { get; }
+  }
 }

@@ -10,8 +10,7 @@
           NavigationCacheMode="Required"
     Background="#FF1E1E1E">
 
-    <Grid>
-        
+    <Grid>        
         
         <Pivot 
             Title="          Downloaders" >
@@ -70,6 +69,7 @@
                         Padding="0,0,0,0"
                         Height="32"
                         Width="125" />
+                    
                     <ComboBox 
                         x:Name="HDComboBox"
                         SelectionChanged="HDComboBox_SelectionChanged"
@@ -77,6 +77,35 @@
                         RelativePanel.Below="YTGrid"
                         Margin="5,5,5,5"
                         PlaceholderText="Quality"/>
+
+
+                    <!--Experimental-->
+                    <!--Button 
+                        x:Name="ButtonPauseResumeYT"
+                        Content="Pause" 
+                        RelativePanel.Below="progressYT"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        IsEnabled="False"
+                        Height="28"
+                        Width="78" 
+                        Margin="5,5,5,5"
+                        Background="DarkViolet"
+                        Click="ButtonPauseResumeYT_Click"/-->
+
+                        <Button 
+                        x:Name="ButtonCancelYT" 
+                        Content="Cancel" 
+                        RelativePanel.Below="progressYT" 
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top" 
+                        IsEnabled="False"
+                        Height="28"
+                        Width="78" 
+                        Margin="5,5,5,5"
+                        Background="Red"
+                        Click="ButtonCancelYT_Click"/>
+
                     <ProgressBar x:Name="progressYT"
                                  RelativePanel.Below="YTDownloadBtn"
                                  Margin="5,5,5,5"
@@ -85,6 +114,7 @@
                                  Height="8"
                                  IsIndeterminate="True"
                                  Visibility="Collapsed"/>
+                    
                     <Button 
                         x:Name="YTDownloadMP3Btn" 
                         Click="YTDownloadMP3Btn_Click"
@@ -95,6 +125,7 @@
                         Padding="0,0,0,0"
                         Height="32"
                         Width="120" />
+                    
                     <TextBlock
                         x:Name="ProgressText" 
                         Width="auto"
@@ -217,15 +248,18 @@
                         </RelativePanel>
                     </Grid>
 
-                    <Button 
+                    <!--Experimental-->
+                        <Button 
                         x:Name="ButtonPauseResume"
                         Content="Pause" 
                         RelativePanel.Below="ProgressBarDownload"
                         HorizontalAlignment="Left"
-                        Margin="5,5,5,5"
                         VerticalAlignment="Top"
                         IsEnabled="False"
-                        Width="87" 
+                        Height="28"
+                        Width="78" 
+                        Margin="5,5,5,5"
+                        Background="DarkViolet"
                         Click="ButtonPauseResume_Click"/>
                     
                     <Button 
@@ -234,10 +268,12 @@
                         RelativePanel.Below="ProgressBarDownload" 
                         RelativePanel.RightOf="ButtonPauseResume"
                         HorizontalAlignment="Left"
-                        Margin="5,5,5,5"
                         VerticalAlignment="Top" 
                         IsEnabled="False"
-                        Width="87" 
+                        Height="28"
+                        Width="78" 
+                        Margin="5,5,5,5"
+                        Background="Red"
                         Click="ButtonCancel_Click"/>
                     
                     <ProgressBar 

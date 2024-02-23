@@ -1,238 +1,315 @@
-﻿using System;
+﻿// Decompiled with JetBrains decompiler
+// Type: VideoLibrary.Helpers.Query
+// Assembly: libvideo, Version=3.1.4.0, Culture=neutral, PublicKeyToken=null
+// MVID: 17817EC5-58AD-49FB-80DB-1FFC57084213
+// Assembly location: C:\Users\Admin\Desktop\RE\EasyFetch\libvideo.dll
+
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
+#nullable disable
 namespace VideoLibrary.Helpers
 {
-    internal partial class Query : IDictionary<string, string>, IReadOnlyDictionary<string, string>
+  internal class Query : 
+    IDictionary<string, string>,
+    ICollection<KeyValuePair<string, string>>,
+    IEnumerable<KeyValuePair<string, string>>,
+    IEnumerable,
+    IReadOnlyDictionary<string, string>,
+    IReadOnlyCollection<KeyValuePair<string, string>>
+  {
+    private int count;
+    private readonly string baseUri;
+    private KeyValuePair<string, string>[] pairs;
+
+    public Query(string uri)
     {
-        private int count;
-        private readonly string baseUri;
-        private KeyValuePair<string, string>[] pairs;
-
-        public Query(string uri)
+      int length1 = uri.IndexOf('?');
+      if (length1 == -1)
+      {
+        if (uri.IndexOf('&') == -1)
         {
-            int divide = uri.IndexOf('?');
-
-            if (divide == -1)
-            {
-                int amp = uri.IndexOf('&');
-                if (amp == -1)
-                {
-                    // no query parameters
-                    this.baseUri = uri;
-                    return;
-                }
-
-                // no base URL
-                this.baseUri = null;
-            }
-            else
-            {
-                // normal URL
-                this.baseUri = uri.Substring(0, divide);
-                uri = uri.Substring(divide + 1);
-            }
-
-            string[] keyValues = uri.Split('&');
-
-            string[] keys = EmptyArray<string>.Value;
-            string[] values = EmptyArray<string>.Value;
-            pairs = new KeyValuePair<string, string>[keyValues.Length];
-
-            for (int i = 0; i < keyValues.Length; i++)
-            {
-                string pair = keyValues[i];
-                int equals = pair.IndexOf('=');
-                string key;
-                string value;
-
-                key = pair.Substring(0, equals);
-                value = equals < pair.Length ? pair.Substring(equals + 1) : string.Empty;
-
-                pairs[i] = new KeyValuePair<string, string>(key, value);
-            }
-
-            this.count = keyValues.Length;
+          this.baseUri = uri;
+          return;
         }
-
-        public string this[string key]
-        {
-            get
-            {
-                for (int i = 0; i < count; i++)
-                {
-                    var pair = pairs[i];
-                    if (pair.Key == key)
-                        return pair.Value;
-                }
-
-                throw new KeyNotFoundException();
-            }
-
-            set
-            {
-                for (int i = 0; i < count; i++)
-                {
-                    var pair = pairs[i];
-                    if (pair.Key == key)
-                    {
-                        pairs[i] = new KeyValuePair<string, string>(key, value);
-                        return;
-                    }
-                }
-
-                throw new KeyNotFoundException();
-            }
-        }
-
-        public string BaseUri => baseUri;
-
-        public int Count => count;
-
-        public bool IsReadOnly => false;
-
-        public KeyCollection Keys => new KeyCollection(this);
-
-        ICollection<string> IDictionary<string, string>.Keys => Keys;
-
-        public KeyValuePair<string, string>[] Pairs => pairs;
-
-        public ValueCollection Values => new ValueCollection(this);
-
-        ICollection<string> IDictionary<string, string>.Values => Values;
-
-        IEnumerable<string> IReadOnlyDictionary<string, string>.Keys => Keys;
-
-        IEnumerable<string> IReadOnlyDictionary<string, string>.Values => Values;
-
-        void ICollection<KeyValuePair<string, string>>.Add(KeyValuePair<string, string> item)
-        {
-            Add(item.Key, item.Value);
-        }
-
-        public void Add(string key, string value)
-        {
-            EnsureCapacity(count + 1);
-            pairs[count++] = new KeyValuePair<string, string>(key, value);
-        }
-
-        public void Clear()
-        {
-            if (count == 0)
-                return;
-
-            Array.Clear(pairs, 0, count);
-            count = 0;
-        }
-
-        bool ICollection<KeyValuePair<string, string>>.Contains(KeyValuePair<string, string> item)
-        {
-            for (int i = 0; i < count; i++)
-            {
-                var pair = pairs[i];
-
-                if (item.Key == pair.Key &&
-                    item.Value == pair.Value)
-                    return true;
-            }
-            return false;
-        }
-
-        public bool ContainsKey(string key)
-        {
-            for (int i = 0; i < count; i++)
-            {
-                if (key == pairs[i].Key)
-                    return true;
-            }
-            return false;
-        }
-
-        void ICollection<KeyValuePair<string, string>>.CopyTo(KeyValuePair<string, string>[] array, int arrayIndex)
-        {
-            Array.Copy(pairs, 0, array, arrayIndex, count);
-        }
-
-        public IEnumerator<KeyValuePair<string, string>> GetEnumerator()
-        {
-            for (int i = 0; i < count; i++)
-                yield return pairs[i];
-        }
-
-        bool ICollection<KeyValuePair<string, string>>.Remove(KeyValuePair<string, string> item)
-        {
-            return Remove(item.Key);
-        }
-
-        public bool Remove(string key)
-        {
-            for (int i = 0; i < count; i++)
-            {
-                var pair = pairs[i];
-                if (pair.Key == key)
-                {
-                    // found it
-                    if (i != count--)
-                        Array.Copy(pairs, i + 1, pairs, i, count - i);
-                    pairs[count] = default(KeyValuePair<string, string>);
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        public bool TryGetValue(string key, out string value)
-        {
-            for (int i = 0; i < count; i++)
-            {
-                var pair = pairs[i];
-                if (key == pair.Key)
-                {
-                    value = pair.Value;
-                    return true;
-                }
-            }
-
-            value = null;
-            return false;
-        }
-
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
-
-        public override string ToString()
-        {
-            if (count == 0)
-                return baseUri;
-
-            var builder = new StringBuilder();
-            if (baseUri != null)
-                builder.Append(baseUri).Append('?');
-
-            var pair = pairs[0]; // OK since we know count is at least 1
-            builder.Append(pair.Key)
-                .Append('=').Append(pair.Value);
-
-            for (int i = 1; i < count; i++)
-            {
-                pair = pairs[i];
-
-                builder.Append('&').Append(pair.Key)
-                    .Append('=').Append(pair.Value);
-            }
-
-            return builder.ToString();
-        }
-
-        private void EnsureCapacity(int capacity)
-        {
-            if (capacity > pairs.Length)
-            {
-                capacity = Math.Max(capacity, pairs.Length * 2);
-
-                Array.Resize(ref pairs, capacity);
-            }
-        }
+        this.baseUri = (string) null;
+      }
+      else
+      {
+        this.baseUri = uri.Substring(0, length1);
+        uri = uri.Substring(length1 + 1);
+      }
+      string[] strArray1 = uri.Split('&');
+      string[] strArray2 = EmptyArray<string>.Value;
+      string[] strArray3 = EmptyArray<string>.Value;
+      this.pairs = new KeyValuePair<string, string>[strArray1.Length];
+      for (int index = 0; index < strArray1.Length; ++index)
+      {
+        string str1 = strArray1[index];
+        int length2 = str1.IndexOf('=');
+        string key = str1.Substring(0, length2);
+        string str2 = length2 < str1.Length ? str1.Substring(length2 + 1) : string.Empty;
+        this.pairs[index] = new KeyValuePair<string, string>(key, str2);
+      }
+      this.count = strArray1.Length;
     }
+
+    public string this[string key]
+    {
+      get
+      {
+        for (int index = 0; index < this.count; ++index)
+        {
+          KeyValuePair<string, string> pair = this.pairs[index];
+          if (pair.Key == key)
+            return pair.Value;
+        }
+        throw new KeyNotFoundException();
+      }
+      set
+      {
+        for (int index = 0; index < this.count; ++index)
+        {
+          if (this.pairs[index].Key == key)
+          {
+            this.pairs[index] = new KeyValuePair<string, string>(key, value);
+            return;
+          }
+        }
+        throw new KeyNotFoundException();
+      }
+    }
+
+    public string BaseUri => this.baseUri;
+
+    public int Count => this.count;
+
+    public bool IsReadOnly => false;
+
+    public Query.KeyCollection Keys => new Query.KeyCollection(this);
+
+    ICollection<string> IDictionary<string, string>.Keys => (ICollection<string>) this.Keys;
+
+    public KeyValuePair<string, string>[] Pairs => this.pairs;
+
+    public Query.ValueCollection Values => new Query.ValueCollection(this);
+
+    ICollection<string> IDictionary<string, string>.Values => (ICollection<string>) this.Values;
+
+    IEnumerable<string> IReadOnlyDictionary<string, string>.Keys => (IEnumerable<string>) this.Keys;
+
+    IEnumerable<string> IReadOnlyDictionary<string, string>.Values
+    {
+      get => (IEnumerable<string>) this.Values;
+    }
+
+    void ICollection<KeyValuePair<string, string>>.Add(KeyValuePair<string, string> item)
+    {
+      this.Add(item.Key, item.Value);
+    }
+
+    public void Add(string key, string value)
+    {
+      this.EnsureCapacity(this.count + 1);
+      this.pairs[this.count++] = new KeyValuePair<string, string>(key, value);
+    }
+
+    public void Clear()
+    {
+      if (this.count == 0)
+        return;
+      Array.Clear((Array) this.pairs, 0, this.count);
+      this.count = 0;
+    }
+
+    bool ICollection<KeyValuePair<string, string>>.Contains(KeyValuePair<string, string> item)
+    {
+      for (int index = 0; index < this.count; ++index)
+      {
+        KeyValuePair<string, string> pair = this.pairs[index];
+        if (item.Key == pair.Key && item.Value == pair.Value)
+          return true;
+      }
+      return false;
+    }
+
+    public bool ContainsKey(string key)
+    {
+      for (int index = 0; index < this.count; ++index)
+      {
+        if (key == this.pairs[index].Key)
+          return true;
+      }
+      return false;
+    }
+
+    void ICollection<KeyValuePair<string, string>>.CopyTo(
+      KeyValuePair<string, string>[] array,
+      int arrayIndex)
+    {
+      Array.Copy((Array) this.pairs, 0, (Array) array, arrayIndex, this.count);
+    }
+
+    public IEnumerator<KeyValuePair<string, string>> GetEnumerator()
+    {
+      for (int i = 0; i < this.count; ++i)
+        yield return this.pairs[i];
+    }
+
+    bool ICollection<KeyValuePair<string, string>>.Remove(KeyValuePair<string, string> item)
+    {
+      return this.Remove(item.Key);
+    }
+
+    public bool Remove(string key)
+    {
+      for (int destinationIndex = 0; destinationIndex < this.count; ++destinationIndex)
+      {
+        if (this.pairs[destinationIndex].Key == key)
+        {
+          if (destinationIndex != this.count--)
+            Array.Copy((Array) this.pairs, destinationIndex + 1, (Array) this.pairs, destinationIndex, this.count - destinationIndex);
+          this.pairs[this.count] = new KeyValuePair<string, string>();
+          return true;
+        }
+      }
+      return false;
+    }
+
+    public bool TryGetValue(string key, out string value)
+    {
+      for (int index = 0; index < this.count; ++index)
+      {
+        KeyValuePair<string, string> pair = this.pairs[index];
+        if (key == pair.Key)
+        {
+          value = pair.Value;
+          return true;
+        }
+      }
+      value = (string) null;
+      return false;
+    }
+
+    IEnumerator IEnumerable.GetEnumerator() => (IEnumerator) this.GetEnumerator();
+
+    public override string ToString()
+    {
+      if (this.count == 0)
+        return this.baseUri;
+      StringBuilder stringBuilder = new StringBuilder();
+      if (this.baseUri != null)
+        stringBuilder.Append(this.baseUri).Append('?');
+      KeyValuePair<string, string> pair = this.pairs[0];
+      stringBuilder.Append(pair.Key).Append('=').Append(pair.Value);
+      for (int index = 1; index < this.count; ++index)
+      {
+        pair = this.pairs[index];
+        stringBuilder.Append('&').Append(pair.Key).Append('=').Append(pair.Value);
+      }
+      return stringBuilder.ToString();
+    }
+
+    private void EnsureCapacity(int capacity)
+    {
+      if (capacity <= this.pairs.Length)
+        return;
+      capacity = Math.Max(capacity, this.pairs.Length * 2);
+      Array.Resize<KeyValuePair<string, string>>(ref this.pairs, capacity);
+    }
+
+    public class KeyCollection : 
+      ICollection<string>,
+      IEnumerable<string>,
+      IEnumerable,
+      IReadOnlyCollection<string>
+    {
+      private readonly Query query;
+
+      public KeyCollection(Query query) => this.query = query;
+
+      public int Count => this.query.Count;
+
+      public bool IsReadOnly => true;
+
+      public void Add(string item) => throw new NotSupportedException();
+
+      public void Clear() => throw new NotSupportedException();
+
+      public bool Contains(string item)
+      {
+        for (int index = 0; index < this.query.Count; ++index)
+        {
+          KeyValuePair<string, string> pair = this.query.Pairs[index];
+          if (item == pair.Key)
+            return true;
+        }
+        return false;
+      }
+
+      public void CopyTo(string[] array, int arrayIndex)
+      {
+        for (int index = 0; index < this.query.Count; ++index)
+          array[arrayIndex++] = this.query.Pairs[index].Key;
+      }
+
+      public IEnumerator<string> GetEnumerator()
+      {
+        for (int i = 0; i < this.query.Count; ++i)
+          yield return this.query.Pairs[i].Key;
+      }
+
+      public bool Remove(string item) => throw new NotSupportedException();
+
+      IEnumerator IEnumerable.GetEnumerator() => (IEnumerator) this.GetEnumerator();
+    }
+
+    public class ValueCollection : 
+      ICollection<string>,
+      IEnumerable<string>,
+      IEnumerable,
+      IReadOnlyCollection<string>
+    {
+      private readonly Query query;
+
+      public ValueCollection(Query query) => this.query = query;
+
+      public int Count => this.query.Count;
+
+      public bool IsReadOnly => true;
+
+      public void Add(string item) => throw new NotSupportedException();
+
+      public void Clear() => throw new NotSupportedException();
+
+      public bool Contains(string item)
+      {
+        for (int index = 0; index < this.query.Count; ++index)
+        {
+          KeyValuePair<string, string> pair = this.query.Pairs[index];
+          if (item == pair.Value)
+            return true;
+        }
+        return false;
+      }
+
+      public void CopyTo(string[] array, int arrayIndex)
+      {
+        for (int index = 0; index < this.query.Count; ++index)
+          array[arrayIndex++] = this.query.Pairs[index].Value;
+      }
+
+      public IEnumerator<string> GetEnumerator()
+      {
+        for (int i = 0; i < this.query.Count; ++i)
+          yield return this.query.Pairs[i].Value;
+      }
+
+      public bool Remove(string item) => throw new NotSupportedException();
+
+      IEnumerator IEnumerable.GetEnumerator() => (IEnumerator) this.GetEnumerator();
+    }
+  }
 }

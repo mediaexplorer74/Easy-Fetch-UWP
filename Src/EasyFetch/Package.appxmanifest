@@ -9,14 +9,14 @@
   IgnorableNamespaces="uap mp rescap iot">
 
   <Identity
-    Name="EasyFetchV1.TWO"
+    Name="EasyFetchV1-2-3"
     Publisher="CN=Admin"
-    Version="1.2.0.0" />
+    Version="1.2.3.0" />
 
   <mp:PhoneIdentity PhoneProductId="55ab909d-124c-33af-a709-b4e82706ad23" PhonePublisherId="23000000-9040-0000-0000-600000000032"/>
 
   <Properties>
-    <DisplayName>Easy-Fetch</DisplayName>
+    <DisplayName>Easy-Fetch v1.2.3</DisplayName>
     <PublisherDisplayName>Empyreal96</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>

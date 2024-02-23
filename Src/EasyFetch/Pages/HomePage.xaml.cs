@@ -52,7 +52,7 @@ namespace Phone_Helper
         /// 
         /// MUST CHANGE THESE BEFORE EACH PUBLIC GITHUB RELEASE
         /// </summary>
-        public static string CurrentBuildVersion = "1.2-alpha";//"1.13.20-prerelease";
+        public static string CurrentBuildVersion = "1.2.3-alpha";//"1.13.20-prerelease";
         public static string PreviousBuildVersion = "1.13.19-prerelease";
         public static string NextBuildVersion = "1.13.21-prerelease";
         public static string UploadedFileName = "Easy-Fetch_1.13.21.0_Debug_Test.zip";
@@ -87,8 +87,8 @@ namespace Phone_Helper
                            + "• Download Files and Youtube Videos" + "\n"
                            + "• Extract Archives easily";
 
-            UpdateOut.Text += $"Whats New in 1.2-alpha?\n" +
-                       $"- No principial changes yet (just minimal code refactoring + renewing certificate)";
+            UpdateOut.Text += $"Whats New in 1.2.3-alpha?\n" +
+                       $"- some libvideo & NiL.js experemintations";
             ///
             /// Network Check and Check for Updates
             bool isNetworkConnected = NetworkInterface.GetIsNetworkAvailable();

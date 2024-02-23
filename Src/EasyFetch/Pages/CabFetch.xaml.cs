@@ -4820,6 +4820,7 @@ namespace Phone_Helper
                 #endregion
             }
         }
+
         private void progressChanged(DownloadOperation downloadOperation)
         {
             int progress = (int)(100 * ((double)downloadOperation.Progress.BytesReceived / (double)downloadOperation.Progress.TotalBytesToReceive));
